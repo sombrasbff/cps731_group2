@@ -1,4 +1,4 @@
-# cps731_group4
+# cps731_group2
 
 Team members: Lauren Gomes, Navdeep Deol,Patricia Gonzales, Wei Chen, Ricky Luo
 
