@@ -155,7 +155,28 @@ public class gui {
 
 		btnBack.setBounds(169, 225, 117, 29);
 		loginPanel.add(btnBack);
-
+		
+		JButton Librarybtn = new JButton("Library");
+		Librarybtn.setBounds(135,40,150,40);
+		afterLoginPanel.add(Librarybtn);
+		JButton Shopbtn = new JButton("Shop");
+		Shopbtn.setBounds(135,80,150,40);
+		afterLoginPanel.add(Shopbtn);
+		JButton Readbtn = new JButton("Read");
+		Readbtn.setBounds(135,120,150,40);
+		afterLoginPanel.add(Readbtn);
+		JButton Logoutbtn = new JButton("Logout");
+		Logoutbtn.setBounds(135,160,150,40);
+		Logoutbtn.addActionListener(new ActionListener()
+		{
+  			public void actionPerformed(ActionEvent arg0)
+  			{
+  				loginPanel.setVisible(true);
+				afterLoginPanel.setVisible(false);
+  			}
+		});
+		afterLoginPanel.add(Logoutbtn);
+		
 		JPanel registerPanel = new JPanel();
 		registerPanel.setBounds(0, 0, 450, 278);
 		frame.getContentPane().add(registerPanel);
