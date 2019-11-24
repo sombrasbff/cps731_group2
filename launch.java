@@ -1,5 +1,5 @@
 import javax.swing.JFrame;
-
+//The class that initially launches the application
 public class launch
 {
 	public static void main(String[] args)
