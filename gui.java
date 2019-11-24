@@ -158,6 +158,27 @@ public class gui {
 		
 		JButton Librarybtn = new JButton("Library");
 		Librarybtn.setBounds(135,40,150,40);
+		Librarybtn.addActionListener(new ActionListener()
+		{
+  			public void actionPerformed(ActionEvent arg0)
+  			{
+  				JPanel LibraryPanel = new JPanel();
+  				LibraryPanel.setLayout(null);
+  				LibraryPanel.setBounds(0, 0, 450, 278);
+  				frame.getContentPane().add(LibraryPanel);
+  				JButton LibrarySort = new JButton("Sort");
+  				JLabel LibraryTitle = new JLabel("Your Library");
+  				LibraryTitle.setBounds(5,5,200,30);
+  				LibrarySort.setBounds(5,35,100,30);
+  				LibraryPanel.add(LibrarySort);
+  				LibraryPanel.add(LibraryTitle);
+  				JButton LibraryExit = new JButton("Return");
+  				LibraryExit.setBounds(300,35,100,30);
+  				LibraryPanel.add(LibraryExit);
+  				LibraryPanel.setVisible(true);
+				afterLoginPanel.setVisible(false);
+  			}
+		});
 		afterLoginPanel.add(Librarybtn);
 		JButton Shopbtn = new JButton("Shop");
 		Shopbtn.setBounds(135,80,150,40);
