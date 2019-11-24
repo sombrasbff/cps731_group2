@@ -162,7 +162,7 @@ public class gui {
 		JButton Shopbtn = new JButton("Shop");
 		Shopbtn.setBounds(135,80,150,40);
 		afterLoginPanel.add(Shopbtn);
-		JButton Readbtn = new JButton("Read");
+		JButton Readbtn = new JButton("Moderator");
 		Readbtn.setBounds(135,120,150,40);
 		afterLoginPanel.add(Readbtn);
 		JButton Logoutbtn = new JButton("Logout");
