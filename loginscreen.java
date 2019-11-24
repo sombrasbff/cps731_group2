@@ -20,11 +20,15 @@ public class loginscreen extends JFrame
 	{
     JPanel MainMenuPanel = new JPanel();
     JLabel Title = new JLabel("Reach");
-		Title.setFont(new Font("Showcard Gothic", Font.BOLD, 35));
-		Title.setBounds(320, 100, 400, 100);
+		Title.setFont(new Font("Arial", Font.BOLD, 35));
+		Title.setBounds(450, 100, 400, 100);
 		MainMenuPanel.add(Title);
+	JLabel Title2 = new JLabel("A Storefront by Group 2");
+		Title2.setFont(new Font("Arial", Font.BOLD, 35));
+		Title2.setBounds(320, 150, 400, 150);
+		MainMenuPanel.add(Title2);
 		MainMenuPanel.setBounds(0,0,400,600);
-		MainMenuPanel.setBackground(new Color(0,0,0));
+		MainMenuPanel.setBackground(Color.WHITE);
 		JButton AppLogin = new JButton("LOGIN"); // set these button fonts to that pixel one on microsoft word 
 		AppLogin.setBounds(400, 250, 200, 50);
 		JButton AppRegister = new JButton("REGISTER");
@@ -49,4 +53,3 @@ public class loginscreen extends JFrame
 		setSize(FRAME_WIDTH, FRAME_HEIGHT);
 	}
 }
-   
