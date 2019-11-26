@@ -69,6 +69,155 @@ public class gui {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
+		// Shop Panel
+		JPanel ShopPanel = new JPanel();
+		JButton ShopSort = new JButton("Sort");
+		JLabel ShopTitle = new JLabel("Available Readings");
+		JButton ShopExit = new JButton("Return");
+		// JTextArea ShopSelection = new JTextArea();
+		// JScrollPane ShopScroll = new JScrollPane(ShopSelection);
+		// ShopScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		// ShopSelection.setBounds(5,75,425,180);
+		ShopPanel.setBounds(0, 0, 450, 278);
+		ShopTitle.setBounds(5, 5, 200, 30);
+		ShopSort.setBounds(5, 35, 100, 30);
+		ShopExit.setBounds(300, 35, 100, 30);
+		// ShopPanel.add(ShopSelection);
+		ShopPanel.add(ShopSort);
+		ShopPanel.add(ShopTitle);
+		ShopPanel.add(ShopExit);
+		// ShopPanel.add(ShopScroll);
+		frame.getContentPane().add(ShopPanel);
+		ShopPanel.setLayout(null);
+
+		JTextArea txtrBookHarryPotter = new JTextArea();
+		txtrBookHarryPotter.setEditable(false);
+		txtrBookHarryPotter
+				.setText("Book Title: Harry Potter\nAuthor: J.K. Rowling\nPublisher: Bloomsbury Publishing (UK)\n");
+		txtrBookHarryPotter.setBounds(7, 92, 245, 64);
+		ShopPanel.add(txtrBookHarryPotter);
+
+		JButton btnBuyEbook = new JButton("Buy Ebook ($9.99)");
+		btnBuyEbook.setBounds(264, 94, 180, 29);
+		ShopPanel.add(btnBuyEbook);
+
+		
+
+		JPanel storePanel = new JPanel();
+		storePanel.setBounds(0, 0, 450, 278);
+		frame.getContentPane().add(storePanel);
+		storePanel.setLayout(null);
+
+		JLabel appLabel = new JLabel("Reach: Ebook & Audiobook Storefront\n");
+		appLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
+		appLabel.setBounds(59, 36, 350, 16);
+		storePanel.add(appLabel);
+
+		JButton btnLogIn = new JButton("Log In ");
+
+		btnLogIn.setBounds(182, 102, 95, 29);
+		storePanel.add(btnLogIn);
+
+		JButton btnRegister = new JButton("Register");
+
+		btnRegister.setBounds(182, 158, 95, 29);
+		storePanel.add(btnRegister);
+
+		JPanel afterLoginPanel = new JPanel();
+		afterLoginPanel.setBounds(0, 0, 450, 278);
+		frame.getContentPane().add(afterLoginPanel);
+		afterLoginPanel.setLayout(null);
+
+		JLabel lblNewLabel_9 = new JLabel("Welcome User");
+		lblNewLabel_9.setBounds(172, 6, 118, 16);
+		afterLoginPanel.add(lblNewLabel_9);
+		afterLoginPanel.setVisible(false);
+		// Library Button
+		JButton Librarybtn = new JButton("Library");
+		Librarybtn.setBounds(135, 40, 150, 40);
+
+		afterLoginPanel.add(Librarybtn);
+		// Shop Button
+		JButton Shopbtn = new JButton("Shop");
+		Shopbtn.setBounds(135, 108, 150, 40);
+		afterLoginPanel.add(Shopbtn);
+
+		// Logout
+		JButton Logoutbtn = new JButton("Logout");
+		Logoutbtn.setBounds(135, 173, 150, 40);
+
+		afterLoginPanel.add(Logoutbtn);
+
+		// Library Panel
+		JPanel LibraryPanel = new JPanel();
+		JButton LibrarySort = new JButton("Sort");
+		JLabel LibraryTitle = new JLabel("Your Library");
+		JButton LibraryExit = new JButton("Return");
+		// JTextArea LibrarySelection = new JTextArea();
+		// JScrollPane LibraryScroll = new JScrollPane(LibrarySelection);
+		// LibraryScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		// LibrarySelection.setBounds(5,75,425,180);
+		LibraryPanel.setBounds(0, 0, 450, 278);
+		LibraryTitle.setBounds(5, 5, 200, 30);
+		LibrarySort.setBounds(5, 35, 100, 30);
+		LibraryExit.setBounds(300, 35, 100, 30);
+
+		// LibraryPanel.add(LibrarySelection);
+		LibraryPanel.add(LibrarySort);
+		LibraryPanel.add(LibraryTitle);
+		LibraryPanel.add(LibraryExit);
+		// LibraryPanel.add(LibraryScroll);
+		frame.getContentPane().add(LibraryPanel);
+		LibraryPanel.setLayout(null);
+
+		JTextArea txtrBookTitleA = new JTextArea();
+		txtrBookTitleA.setEditable(false);
+		txtrBookTitleA.setText(
+				"Book Title: A Cool Kid Like Me! \nVersion: Ebook\nAuthor: Hans Wilhelm \nPublisher: Crown, New York USA");
+		txtrBookTitleA.setBounds(21, 98, 250, 75);
+		LibraryPanel.add(txtrBookTitleA);
+
+		JButton btnClickToRead = new JButton("Read");
+		btnClickToRead.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				reader.open();
+			}
+		});
+		btnClickToRead.setBounds(283, 93, 141, 29);
+		LibraryPanel.add(btnClickToRead);
+
+		JButton btnTakeAQuiz = new JButton("Take a Quiz");
+		btnTakeAQuiz.setBounds(283, 119, 141, 29);
+		LibraryPanel.add(btnTakeAQuiz);
+
+		JButton btnDiscussionBoard = new JButton("Discussion Board");
+		btnDiscussionBoard.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnDiscussionBoard.setBounds(283, 144, 141, 29);
+		LibraryPanel.add(btnDiscussionBoard);
+		LibraryPanel.setVisible(false);
+
+		JPanel buyBookPanel = new JPanel();
+		buyBookPanel.setBounds(0, 0, 450, 278);
+		frame.getContentPane().add(buyBookPanel);
+		buyBookPanel.setLayout(null);
+		buyBookPanel.setVisible(false);
+
+		JLabel lblNewLabel_10 = new JLabel("Auto-Payment from Credit Card XXXX-XXX-XXX Successful!");
+		lblNewLabel_10.setBounds(33, 53, 390, 16);
+		buyBookPanel.add(lblNewLabel_10);
+
+		JLabel lblHarryPotterAdded = new JLabel("Harry Potter added to your library");
+		lblHarryPotterAdded.setBounds(115, 99, 215, 16);
+		buyBookPanel.add(lblHarryPotterAdded);
+
+		JButton btnGoBack = new JButton("Go Back");
+
+		btnGoBack.setBounds(166, 167, 117, 29);
+		buyBookPanel.add(btnGoBack);
+
 		JPanel feedback3 = new JPanel();
 		feedback3.setBounds(0, 0, 450, 278);
 		frame.getContentPane().add(feedback3);
@@ -117,16 +266,6 @@ public class gui {
 		feedback1.add(tryagainbtn);
 		feedback1.setVisible(false);
 
-		JPanel afterLoginPanel = new JPanel();
-		afterLoginPanel.setBounds(0, 0, 450, 278);
-		frame.getContentPane().add(afterLoginPanel);
-		afterLoginPanel.setLayout(null);
-
-		JLabel lblNewLabel_9 = new JLabel("Welcome User");
-		lblNewLabel_9.setBounds(172, 6, 118, 16);
-		afterLoginPanel.add(lblNewLabel_9);
-		afterLoginPanel.setVisible(false);
-
 		JPanel loginPanel = new JPanel();
 		loginPanel.setBounds(0, 0, 450, 278);
 		frame.getContentPane().add(loginPanel);
@@ -160,144 +299,7 @@ public class gui {
 
 		btnBack.setBounds(169, 225, 117, 29);
 		loginPanel.add(btnBack);
-		
-		//Library Panel
-		JPanel LibraryPanel = new JPanel();
-		JButton LibrarySort = new JButton("Sort");
-		JLabel LibraryTitle = new JLabel("Your Library");
-		JButton LibraryExit = new JButton("Return");
-		JTextArea LibrarySelection = new JTextArea();
-		JScrollPane LibraryScroll = new JScrollPane(LibrarySelection);
-		LibraryScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-		LibrarySelection.setBounds(5,75,425,180);
-		LibraryPanel.setBounds(0, 0, 450, 278);
-		LibraryTitle.setBounds(5,5,200,30);
-		LibrarySort.setBounds(5,35,100,30);
-		LibraryExit.setBounds(300,35,100,30);
-		LibraryExit.addActionListener(new ActionListener()
-		{
-  			public void actionPerformed(ActionEvent arg0)
-  			{
-  				LibraryPanel.setVisible(false);
-  				afterLoginPanel.setVisible(true);
-  			}
-		});
-		LibraryPanel.add(LibrarySelection);
-		LibraryPanel.add(LibrarySort);
-		LibraryPanel.add(LibraryTitle);
-		LibraryPanel.add(LibraryExit);
-		LibraryPanel.add(LibraryScroll);
-		frame.getContentPane().add(LibraryPanel);
-		LibraryPanel.setLayout(null);
-		LibraryPanel.setVisible(false);
-		//Library Button
-		JButton Librarybtn = new JButton("Library");
-		Librarybtn.setBounds(135,40,150,40);
-		Librarybtn.addActionListener(new ActionListener()
-		{
-  			public void actionPerformed(ActionEvent arg0)
-  			{
-  				LibraryPanel.setVisible(true);
-				afterLoginPanel.setVisible(false);
-  			}
-		});
-		afterLoginPanel.add(Librarybtn);
-		// Shop Panel
-		JPanel ShopPanel = new JPanel();
-		JButton ShopSort = new JButton("Sort");
-		JLabel ShopTitle = new JLabel("Available Readings");
-		JButton ShopExit = new JButton("Return");
-		JTextArea ShopSelection = new JTextArea();
-		JScrollPane ShopScroll = new JScrollPane(ShopSelection);
-		ShopScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-		ShopSelection.setBounds(5,75,425,180);
-		ShopPanel.setBounds(0, 0, 450, 278);
-		ShopTitle.setBounds(5,5,200,30);
-		ShopSort.setBounds(5,35,100,30);
-		ShopExit.setBounds(300,35,100,30);
-		ShopExit.addActionListener(new ActionListener()
-		{
-  			public void actionPerformed(ActionEvent arg0)
-  			{
-  				ShopPanel.setVisible(false);
-  				afterLoginPanel.setVisible(true);
-  			}
-		});
-		ShopPanel.add(ShopSelection);
-		ShopPanel.add(ShopSort);
-		ShopPanel.add(ShopTitle);
-		ShopPanel.add(ShopExit);
-		ShopPanel.add(ShopScroll);
-		frame.getContentPane().add(ShopPanel);
-		ShopPanel.setLayout(null);
-		ShopPanel.setVisible(false);
-		// Shop Button
-		JButton Shopbtn = new JButton("Shop");
-		Shopbtn.setBounds(135,80,150,40);
-		afterLoginPanel.add(Shopbtn);
-		Shopbtn.addActionListener(new ActionListener()
-		{
-  			public void actionPerformed(ActionEvent arg0)
-  			{
-  				ShopPanel.setVisible(true);
-				afterLoginPanel.setVisible(false);
-  			}
-		});
-		//Moderator Panel
-		JPanel ModeratorPanel = new JPanel();
-		JButton ModeratorSort = new JButton("Sort");
-		JLabel ModeratorTitle = new JLabel("Moderator a forum");
-		JButton ModeratorExit = new JButton("Return");
-		JTextArea ModeratorSelection = new JTextArea();
-		JScrollPane ModeratorScroll = new JScrollPane(ModeratorSelection);
-		ModeratorScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-		ModeratorSelection.setBounds(5,75,425,180);
-		ModeratorPanel.setBounds(0, 0, 450, 278);
-		ModeratorTitle.setBounds(5,5,200,30);
-		ModeratorSort.setBounds(5,35,100,30);
-		ModeratorExit.setBounds(300,35,100,30);
-		ModeratorExit.addActionListener(new ActionListener()
-		{
-  			public void actionPerformed(ActionEvent arg0)
-  			{
-  				ModeratorPanel.setVisible(false);
-  				afterLoginPanel.setVisible(true);
-  			}
-		});
-		ModeratorPanel.add(ModeratorSelection);
-		ModeratorPanel.add(ModeratorSort);
-		ModeratorPanel.add(ModeratorTitle);
-		ModeratorPanel.add(ModeratorExit);
-		ModeratorPanel.add(ModeratorScroll);
-		frame.getContentPane().add(ModeratorPanel);
-		ModeratorPanel.setLayout(null);
-		ModeratorPanel.setVisible(false);
-		//Moderator Button
-		JButton Moderatorbtn = new JButton("Moderator");
-		Moderatorbtn.setBounds(135,120,150,40);
-		Moderatorbtn.addActionListener(new ActionListener()
-		{
-  			public void actionPerformed(ActionEvent arg0)
-  			{
-  				ModeratorPanel.setVisible(true);
-				afterLoginPanel.setVisible(false);
-  			}
-		});
-		afterLoginPanel.add(Moderatorbtn);
-		
-		//Logout
-		JButton Logoutbtn = new JButton("Logout");
-		Logoutbtn.setBounds(135,160,150,40);
-		Logoutbtn.addActionListener(new ActionListener()
-		{
-  			public void actionPerformed(ActionEvent arg0)
-  			{
-  				loginPanel.setVisible(true);
-				afterLoginPanel.setVisible(false);
-  			}
-		});
-		afterLoginPanel.add(Logoutbtn);
-	
+
 		JPanel registerPanel = new JPanel();
 		registerPanel.setBounds(0, 0, 450, 278);
 		frame.getContentPane().add(registerPanel);
@@ -381,30 +383,14 @@ public class gui {
 		btnRegister_1.setBounds(157, 219, 117, 29);
 		registerPanel.add(btnRegister_1);
 
-		JButton btnBack1 = new JButton("Go Back");
-
-		btnBack1.setBounds(157, 243, 117, 29);
-		registerPanel.add(btnBack1);
-
-		JPanel storePanel = new JPanel();
-		storePanel.setBounds(0, 0, 450, 278);
-		frame.getContentPane().add(storePanel);
-		storePanel.setLayout(null);
-
-		JLabel appLabel = new JLabel("Reach: Ebook & Audiobook Storefront\n");
-		appLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
-		appLabel.setBounds(59, 36, 350, 16);
-		storePanel.add(appLabel);
-
-		JButton btnLogIn = new JButton("Log In ");
-
-		btnLogIn.setBounds(182, 102, 95, 29);
-		storePanel.add(btnLogIn);
-
-		JButton btnRegister = new JButton("Register");
-
-		btnRegister.setBounds(182, 158, 95, 29);
-		storePanel.add(btnRegister);
+		JButton btnNewButton_1 = new JButton("Quit");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		btnNewButton_1.setBounds(182, 214, 95, 29);
+		storePanel.add(btnNewButton_1);
 
 		btnLogIn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -421,6 +407,11 @@ public class gui {
 				registerPanel.setVisible(true);
 			}
 		});
+
+		JButton btnBack1 = new JButton("Go Back");
+
+		btnBack1.setBounds(157, 243, 117, 29);
+		registerPanel.add(btnBack1);
 		btnBack1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				storePanel.setVisible(true);
@@ -431,11 +422,11 @@ public class gui {
 		btnRegister_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				
 				if (textFieldname.getText().equals("") || textFieldemail.getText().equals("")
 						|| textFielddateOfBirth.getText().equals("") || textFieldaddress.getText().equals("")
 						|| textFieldphoneNumber.getText().equals("") || textFieldcreditCardNumber.getText().equals("")
-						|| textFieldcreateUsername.getText().equals("")|| textFieldcreatePassword.getText().equals("")) {
+						|| textFieldcreateUsername.getText().equals("")
+						|| textFieldcreatePassword.getText().equals("")) {
 					registerPanel.setVisible(false);
 					feedback3.setVisible(true);
 				} else {
@@ -489,6 +480,59 @@ public class gui {
 			public void actionPerformed(ActionEvent e) {
 				feedback3.setVisible(false);
 				registerPanel.setVisible(true);
+			}
+		});
+		btnGoBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buyBookPanel.setVisible(false);
+				ShopPanel.setVisible(true);
+			}
+		});
+		LibraryExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				LibraryPanel.setVisible(false);
+				afterLoginPanel.setVisible(true);
+			}
+		});
+		Shopbtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ShopPanel.setVisible(true);
+				afterLoginPanel.setVisible(false);
+			}
+		});
+		Librarybtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				LibraryPanel.setVisible(true);
+				afterLoginPanel.setVisible(false);
+			}
+		});
+		Logoutbtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				loginPanel.setVisible(true);
+				afterLoginPanel.setVisible(false);
+			}
+		});
+		JButton btnNewButton = new JButton("Buy Audiobook ($13.99)");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ShopPanel.setVisible(false);
+				buyBookPanel.setVisible(true);
+			}
+		});
+		btnNewButton.setBounds(264, 123, 180, 29);
+		ShopPanel.add(btnNewButton);
+		ShopPanel.setVisible(false);
+
+		ShopExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ShopPanel.setVisible(false);
+				afterLoginPanel.setVisible(true);
+			}
+		});
+		btnBuyEbook.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ShopPanel.setVisible(false);
+				buyBookPanel.setVisible(true);
 			}
 		});
 

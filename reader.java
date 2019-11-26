@@ -14,7 +14,7 @@ public class reader {
 		if (Desktop.isDesktopSupported()) {
 		    try {
 			/* Change file path to run */    
-		        File myFile = new File("Path/To/Book.pdf");
+		        File myFile = new File("Book.pdf");
 		        Desktop.getDesktop().open(myFile);
 		    } catch (IOException ex) {
 		        // no application registered for PDFs

@@ -52,7 +52,7 @@ public class book {
 	{
 		return price;
 	}
-	public void setPrice(String newPrice)
+	public void setPrice(Double newPrice)
 	{
 		this.price = newPrice;
 	}
