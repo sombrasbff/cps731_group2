@@ -2,9 +2,14 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
+import javax.swing.ScrollPaneConstants;
+
 import java.awt.BorderLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
 import java.awt.Color;
 import java.awt.SystemColor;
 import javax.swing.JLabel;
@@ -156,36 +161,131 @@ public class gui {
 		btnBack.setBounds(169, 225, 117, 29);
 		loginPanel.add(btnBack);
 		
+		//Library Panel
+		JPanel LibraryPanel = new JPanel();
+		JButton LibrarySort = new JButton("Sort");
+		JLabel LibraryTitle = new JLabel("Your Library");
+		JButton LibraryExit = new JButton("Return");
+		JTextArea LibrarySelection = new JTextArea();
+		JScrollPane LibraryScroll = new JScrollPane(LibrarySelection);
+		LibraryScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		LibrarySelection.setBounds(5,75,425,180);
+		LibraryPanel.setBounds(0, 0, 450, 278);
+		LibraryTitle.setBounds(5,5,200,30);
+		LibrarySort.setBounds(5,35,100,30);
+		LibraryExit.setBounds(300,35,100,30);
+		LibraryExit.addActionListener(new ActionListener()
+		{
+  			public void actionPerformed(ActionEvent arg0)
+  			{
+  				LibraryPanel.setVisible(false);
+  				afterLoginPanel.setVisible(true);
+  			}
+		});
+		LibraryPanel.add(LibrarySelection);
+		LibraryPanel.add(LibrarySort);
+		LibraryPanel.add(LibraryTitle);
+		LibraryPanel.add(LibraryExit);
+		LibraryPanel.add(LibraryScroll);
+		frame.getContentPane().add(LibraryPanel);
+		LibraryPanel.setLayout(null);
+		LibraryPanel.setVisible(false);
+		//Library Button
 		JButton Librarybtn = new JButton("Library");
 		Librarybtn.setBounds(135,40,150,40);
 		Librarybtn.addActionListener(new ActionListener()
 		{
   			public void actionPerformed(ActionEvent arg0)
   			{
-  				JPanel LibraryPanel = new JPanel();
-  				LibraryPanel.setLayout(null);
-  				LibraryPanel.setBounds(0, 0, 450, 278);
-  				frame.getContentPane().add(LibraryPanel);
-  				JButton LibrarySort = new JButton("Sort");
-  				JLabel LibraryTitle = new JLabel("Your Library");
-  				LibraryTitle.setBounds(5,5,200,30);
-  				LibrarySort.setBounds(5,35,100,30);
-  				LibraryPanel.add(LibrarySort);
-  				LibraryPanel.add(LibraryTitle);
-  				JButton LibraryExit = new JButton("Return");
-  				LibraryExit.setBounds(300,35,100,30);
-  				LibraryPanel.add(LibraryExit);
   				LibraryPanel.setVisible(true);
 				afterLoginPanel.setVisible(false);
   			}
 		});
 		afterLoginPanel.add(Librarybtn);
+		// Shop Panel
+		JPanel ShopPanel = new JPanel();
+		JButton ShopSort = new JButton("Sort");
+		JLabel ShopTitle = new JLabel("Available Readings");
+		JButton ShopExit = new JButton("Return");
+		JTextArea ShopSelection = new JTextArea();
+		JScrollPane ShopScroll = new JScrollPane(ShopSelection);
+		ShopScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		ShopSelection.setBounds(5,75,425,180);
+		ShopPanel.setBounds(0, 0, 450, 278);
+		ShopTitle.setBounds(5,5,200,30);
+		ShopSort.setBounds(5,35,100,30);
+		ShopExit.setBounds(300,35,100,30);
+		ShopExit.addActionListener(new ActionListener()
+		{
+  			public void actionPerformed(ActionEvent arg0)
+  			{
+  				ShopPanel.setVisible(false);
+  				afterLoginPanel.setVisible(true);
+  			}
+		});
+		ShopPanel.add(ShopSelection);
+		ShopPanel.add(ShopSort);
+		ShopPanel.add(ShopTitle);
+		ShopPanel.add(ShopExit);
+		ShopPanel.add(ShopScroll);
+		frame.getContentPane().add(ShopPanel);
+		ShopPanel.setLayout(null);
+		ShopPanel.setVisible(false);
+		// Shop Button
 		JButton Shopbtn = new JButton("Shop");
 		Shopbtn.setBounds(135,80,150,40);
 		afterLoginPanel.add(Shopbtn);
-		JButton Readbtn = new JButton("Moderator");
-		Readbtn.setBounds(135,120,150,40);
-		afterLoginPanel.add(Readbtn);
+		Shopbtn.addActionListener(new ActionListener()
+		{
+  			public void actionPerformed(ActionEvent arg0)
+  			{
+  				ShopPanel.setVisible(true);
+				afterLoginPanel.setVisible(false);
+  			}
+		});
+		//Moderator Panel
+		JPanel ModeratorPanel = new JPanel();
+		JButton ModeratorSort = new JButton("Sort");
+		JLabel ModeratorTitle = new JLabel("Moderator a forum");
+		JButton ModeratorExit = new JButton("Return");
+		JTextArea ModeratorSelection = new JTextArea();
+		JScrollPane ModeratorScroll = new JScrollPane(ModeratorSelection);
+		ModeratorScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		ModeratorSelection.setBounds(5,75,425,180);
+		ModeratorPanel.setBounds(0, 0, 450, 278);
+		ModeratorTitle.setBounds(5,5,200,30);
+		ModeratorSort.setBounds(5,35,100,30);
+		ModeratorExit.setBounds(300,35,100,30);
+		ModeratorExit.addActionListener(new ActionListener()
+		{
+  			public void actionPerformed(ActionEvent arg0)
+  			{
+  				ModeratorPanel.setVisible(false);
+  				afterLoginPanel.setVisible(true);
+  			}
+		});
+		ModeratorPanel.add(ModeratorSelection);
+		ModeratorPanel.add(ModeratorSort);
+		ModeratorPanel.add(ModeratorTitle);
+		ModeratorPanel.add(ModeratorExit);
+		ModeratorPanel.add(ModeratorScroll);
+		frame.getContentPane().add(ModeratorPanel);
+		ModeratorPanel.setLayout(null);
+		ModeratorPanel.setVisible(false);
+		//Moderator Button
+		JButton Moderatorbtn = new JButton("Moderator");
+		Moderatorbtn.setBounds(135,120,150,40);
+		Moderatorbtn.addActionListener(new ActionListener()
+		{
+  			public void actionPerformed(ActionEvent arg0)
+  			{
+  				ModeratorPanel.setVisible(true);
+				afterLoginPanel.setVisible(false);
+  			}
+		});
+		afterLoginPanel.add(Moderatorbtn);
+		
+		//Logout
 		JButton Logoutbtn = new JButton("Logout");
 		Logoutbtn.setBounds(135,160,150,40);
 		Logoutbtn.addActionListener(new ActionListener()
@@ -197,7 +297,7 @@ public class gui {
   			}
 		});
 		afterLoginPanel.add(Logoutbtn);
-		
+	
 		JPanel registerPanel = new JPanel();
 		registerPanel.setBounds(0, 0, 450, 278);
 		frame.getContentPane().add(registerPanel);
